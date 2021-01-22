@@ -1,0 +1,19 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Install Apache and MySQL
+      apt:
+        name: [ 'apache2', 'mysql-server' ]
+        state: latest
+          
+    - name: Create 'deploy' user
+      user:
+        name: deploy
+        shell: /bin/bash
+        groups: rvm
+        append: yes
+        generate_ssh_key: yes
+        ssh_key_bits: 4096
+        ssh_key_file: .ssh/id_rsa
+        

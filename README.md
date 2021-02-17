@@ -4,7 +4,7 @@ server provisioning exercise
 
  
 
-Given root (password will be provided to start the exercise) access to a fresh Ubuntu server named 'exercise1.beezwax.net',
+Given root access to a fresh Ubuntu server named 'exercise1.example.com',
 
 perform the following using Ansible as much as possible:
 
@@ -37,21 +37,3 @@ and permissions such that the 'deploy' user has read/write access, the webserver
 has read/write access to any log files and read-only access to everything else,
 
 and that other users have no access.
-
- 
-
-Bonus points for:
-
- 
-
-Deploying a "Hello World" Rails 5 app under the DocumentRoot created above.  The app should
-
-just connect to the MySQL server and display its version
-
- 
-
-Deploying the app from GitHub.
-
- 
-
-Deploying with Capistrano.
